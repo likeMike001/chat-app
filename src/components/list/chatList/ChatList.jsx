@@ -4,7 +4,7 @@ import AddUser from "./addUser/AddUser"
 
 const ChatList = () => {
 
-  const [addMode, setAddMode] = useState(true)
+  const [addMode, setAddMode] = useState(false)
 
   return (
     <div className="chatList">
