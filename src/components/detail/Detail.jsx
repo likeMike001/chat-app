@@ -1,7 +1,6 @@
 import React from 'react'
 import "./detail.css"
-
-
+import { auth } from '../../lib/firebase'
 
 const Detail = () => {
   return (
@@ -46,20 +45,20 @@ const Detail = () => {
               </div>
               <img src="./download.png" alt="" className="icon"></img>
             </div>
-            <div className="photoItem">
+            {/* <div className="photoItem">
               <div className="photoDetail">
                 <img src="https://www.pexels.com/photo/brown-hummingbird-selective-focus-photography-1133957/" alt=""></img>
                 <span>photo_212</span>
               </div>
               <img src="./download.png" alt="" className="icon"></img>
-            </div>
-            <div className="photoItem">
+            </div> */}
+            {/* <div className="photoItem">
               <div className="photoDetail">
                 <img src="https://www.pexels.com/photo/brown-hummingbird-selective-focus-photography-1133957/" alt=""></img>
                 <span>photo_212</span>
               </div>
               <img src="./download.png" alt="" className="icon"></img>
-            </div>
+            </div> */}
             <div className="photoItem">
               <div className="photoDetail">
                 <img src="https://www.pexels.com/photo/brown-hummingbird-selective-focus-photography-1133957/" alt=""></img>
@@ -76,7 +75,7 @@ const Detail = () => {
           </div>
         </div>
         <button>Block User</button>
-        <button className="logout">Logout </button>
+        <button className="logout" onClick={() => auth.signOut()}>Logout </button>
       </div>
     </div>
   )
